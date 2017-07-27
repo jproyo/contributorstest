@@ -36,7 +36,7 @@ public class ContributorsApi {
 	@RequestMapping(value="/{city}/top/{number}", method=RequestMethod.GET, consumes="application/json")
 	@ResponseStatus(value = HttpStatus.OK)
 	@ResponseBody
-	public ResponseEntity<List<Contributor>> hello(@PathVariable String city, @PathVariable Integer number){
+	public ResponseEntity<List<Contributor>> contributors(@PathVariable(required = true) String city, @PathVariable(required = true) Integer number){
 		try {
 			return new ResponseEntity<List<Contributor>>(service.contributors(city, number), HttpStatus.OK);
 		} catch (Exception e) {
