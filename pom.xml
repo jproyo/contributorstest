@@ -50,9 +50,13 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.jcabi</groupId>
-			<artifactId>jcabi-github</artifactId>
-			<version>0.23</version>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>13.0</version>
 		</dependency>
 
 		<dependency>

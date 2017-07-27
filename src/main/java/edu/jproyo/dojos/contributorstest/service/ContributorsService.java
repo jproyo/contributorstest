@@ -34,7 +34,7 @@ public class ContributorsService {
 	public List<Contributor> contributors(String city, Integer number) {
 		ContributorRequest request = new ContributorRequest(city, number);
 		List<Contributor> result = cache.contributors(request).orElse(github.contributors(request));
-		cache.put(request, result);
+		if(result != null && !result.isEmpty()) cache.put(request, result);
 		return result;
 	}
 	
